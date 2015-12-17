@@ -1,0 +1,26 @@
+{
+  "name": "axiles89/socket",
+  "description": "Run socket daemon",
+  "keywords": [
+    "php",
+    "yii2",
+    "socket",
+    "daemon"
+  ],
+  "type": "library",
+  "license": "Public Domain",
+  "authors": [
+    {
+      "name": "Kyshnerev",
+      "email": "DIMKYSH@MAIL.RU"
+    }
+  ],
+  "require": {
+    "php": ">= 5.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "axiles89\\socket\\": "lib/"
+    }
+  }
+}
