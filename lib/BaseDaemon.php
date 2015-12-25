@@ -21,7 +21,12 @@ abstract class BaseDaemon extends Component implements IDaemon
     /**
      * @var array
      */
-    private $typeList = ['udp'];
+    private $typeList = ['udp', 'tcp'];
+
+    /**
+     * @var int
+     */
+    protected $maxClient = 10;
 
     /**
      * @var
@@ -151,5 +156,23 @@ abstract class BaseDaemon extends Component implements IDaemon
     {
         $this->name = $name;
     }
+
+    /**
+     * @return int
+     */
+    public function getMaxClient()
+    {
+        return $this->maxClient;
+    }
+
+    /**
+     * @param int $maxClient
+     */
+    public function setMaxClient($maxClient)
+    {
+        $this->maxClient = $maxClient;
+    }
+
+
 
 }

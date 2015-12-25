@@ -63,7 +63,6 @@ class Application
         $root = $this;
 
         pcntl_signal(SIGUSR1, function() use ($root) {
-            //echo "closed chidlren \n";
             $root->stop = true;
         });
 
@@ -110,6 +109,8 @@ class Application
 
             $this->signalHandlersParent();
 
+            declare(ticks=1);
+
             $pid = pcntl_fork();
 
             if ($pid > 0) {
@@ -126,14 +127,12 @@ class Application
 
                 $stop = false;
 
-                //$pid = posix_getpid();
-                //echo "Daemon pid = {$pid} {$daemon->getName()}\n";
-
                 $socket = SocketFactory::create($daemon->getType(), $daemon);
 
                 while (!$this->stop) {
                     $socket->read();
                     pcntl_signal_dispatch();
+                    sleep(3);
                 }
 
                 $socket->close();

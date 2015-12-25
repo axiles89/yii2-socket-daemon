@@ -20,7 +20,8 @@ class SocketFactory
      * @var array
      */
     protected static $type = [
-        'udp' => "axiles89\\socket\\SocketFactory\\UdpSocket"
+        'udp' => "axiles89\\socket\\SocketFactory\\UdpSocket",
+        'tcp' => "axiles89\\socket\\SocketFactory\\TcpSocket"
     ];
 
     /**

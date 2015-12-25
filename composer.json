@@ -1,5 +1,5 @@
 {
-  "name": "axiles89/socket",
+  "name": "axiles89/yii2-socket",
   "description": "Run socket daemon",
   "keywords": [
     "php",
@@ -16,7 +16,8 @@
     }
   ],
   "require": {
-    "php": ">= 5.4"
+    "php": ">= 5.4",
+    "yiisoft/yii2": ">=2.0.5"
   },
   "autoload": {
     "psr-4": {
