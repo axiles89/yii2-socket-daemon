@@ -34,6 +34,13 @@ Socket daemon starter
                   'ip' => '192.168.68.130',
                   'port' => 4040
               ],
+              'TestDaemon2' => [
+                  'class' => 'axiles89\socket\test\TestDaemon',
+                  'type' => 'tcp',
+                  'ip' => '192.168.68.130',
+                  'port' => 4141,
+                  'maxClient' => 20
+              ],
               ...
             ]
         ],
