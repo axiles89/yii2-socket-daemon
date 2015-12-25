@@ -6,7 +6,7 @@ Socket daemon starter
 Установка
 -------------------
  
-Установка с помощью пакета composer `"axiles89/socket": "*"`
+Установка с помощью пакета composer `"axiles89/yii2-socket": "*"`
 
 
 Пример использования
